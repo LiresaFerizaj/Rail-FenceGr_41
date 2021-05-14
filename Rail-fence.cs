@@ -85,3 +85,32 @@ namespace RailFence
 
             return rezultati;
         }
+        
+        private static string Cipher(string clearText, int celesi)
+        {
+            string rezultati = string.Empty;
+
+            char[][] matrix = BuildCleanMatrix(celesi, clearText.Length);
+
+            int inkrementiRreshtit = 1;
+            for (int rreshti = 0, kolona = 0; kolona < matrix[rreshti].Length; kolona++)
+            {
+                if (
+                        rreshti + inkrementiRreshtit == matrix.Length ||
+                        rreshti + inkrementiRreshtit == -1
+                        )
+                {
+                    inkrementiRreshtit *= -1;
+                }
+
+                matrix[rreshti][kolona] = clearText[kolona];
+
+                rreshti += inkrementiRreshtit;
+            }
+
+            rezultati = BuildStringFromMatrix(matrix);
+
+            return rezultati;
+        }
+
+        
