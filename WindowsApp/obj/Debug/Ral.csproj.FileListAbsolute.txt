@@ -1,0 +1,10 @@
+C:\Users\HP\source\repos\Ral\bin\Debug\Ral.exe.config
+C:\Users\HP\source\repos\Ral\bin\Debug\Ral.exe
+C:\Users\HP\source\repos\Ral\bin\Debug\Ral.pdb
+C:\Users\HP\source\repos\Ral\obj\Debug\Ral.csprojAssemblyReference.cache
+C:\Users\HP\source\repos\Ral\obj\Debug\Ral.Form1.resources
+C:\Users\HP\source\repos\Ral\obj\Debug\Ral.Properties.Resources.resources
+C:\Users\HP\source\repos\Ral\obj\Debug\Ral.csproj.GenerateResource.cache
+C:\Users\HP\source\repos\Ral\obj\Debug\Ral.csproj.CoreCompileInputs.cache
+C:\Users\HP\source\repos\Ral\obj\Debug\Ral.exe
+C:\Users\HP\source\repos\Ral\obj\Debug\Ral.pdb
