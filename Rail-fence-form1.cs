@@ -67,77 +67,7 @@ namespace Ral
         }
     }
 }
-public class Run
-{
-    public static char[][] BuildCleanMatrix(int rreshtat, int kolonat)
-    {
-        char[][] rezultati = new char[rreshtat][];
 
-        for (int rreshti = 0; rreshti < rezultati.Length; rreshti++)
-        {
-            rezultati[rreshti] = new char[kolonat];
-        }
-
-        return rezultati;
-    }
-    public static string BuildStringFromMatrix(char[][] matrix)
-    {
-        string rezultati = string.Empty;
-
-        for (int rreshti = 0; rreshti < matrix.Length; rreshti++)
-        {
-            for (int kolona = 0; kolona < matrix[rreshti].Length; kolona++)
-            {
-                if (matrix[rreshti][kolona] != '\0')
-                {
-                    rezultati += matrix[rreshti][kolona];
-                }
-            }
-        }
-
-        return rezultati;
-    }
-    public static char[][] Transpose(char[][] matrix)
-    {
-        char[][] rezultati =
-                BuildCleanMatrix(matrix[0].Length, matrix.Length);
-
-        for (int rreshti = 0; rreshti < matrix.Length; rreshti++)
-        {
-            for (int kolona = 0; kolona < matrix[rreshti].Length; kolona++)
-            {
-                rezultati[kolona][rreshti] = matrix[rreshti][kolona];
-            }
-        }
-
-        return rezultati;
-    }
-    public static string Cipher(string clearText, int celesi)
-    {
-        string rezultati = string.Empty;
-
-        char[][] matrix = BuildCleanMatrix(celesi, clearText.Length);
-
-        int inkrementiRreshtit = 1;
-        for (int rreshti = 0, kolona = 0; kolona < matrix[rreshti].Length; kolona++)
-        {
-            if (
-                    rreshti + inkrementiRreshtit == matrix.Length ||
-                    rreshti + inkrementiRreshtit == -1
-                    )
-            {
-                inkrementiRreshtit *= -1;
-            }
-
-            matrix[rreshti][kolona] = clearText[kolona];
-
-            rreshti += inkrementiRreshtit;
-        }
-
-        rezultati = BuildStringFromMatrix(matrix);
-
-        return rezultati;
-    }
 
     public static string Decipher(string cipherText, int celesi)
     {
