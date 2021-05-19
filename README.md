@@ -7,9 +7,9 @@ Në algoritmin Rail-fence, teksti i thjeshtë shkruhet diagonalisht poshtë në 
 
 Per shembull, për të kriptuar mesazhin 'HELLO WORLD.  ' me 3 "rails", e shkruajme te tille:
 
-H . . . O . . . L . . 
-. E . L . W . R . D . 
-. . L . . . O . . .  
+H - - - O - - - L - - - - - - -  - - - -- - - - - -  -- - --  - - - - - - --  - - - - - - - - - - - - - - - - - - 
+- E - L - W - R - D - - - - - - -- - - - -- - - - - - - - - - - - - - - - - -  --  -- - - - - - - - -  - - -- - - 
+- - L - - - O - - - - - -  - - - - - - - - - - - - - - - - - - - - -- - - - -- - - - - - --  - - - -  
 
 Pastaj lexohet teksti horizontalisht për të marrë tekstin e koduar:
 Prej nga kemi:
