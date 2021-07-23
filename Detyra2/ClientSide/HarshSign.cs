@@ -52,3 +52,18 @@ namespace ClientSide
                 throw new ApplicationException("Signature did not match from sender");
             }
         }
+        public string ExtractMessage(string CipherText, string SignatureText)
+        {
+
+            byte[] cipherTextBytes = Convert.FromBase64String(CipherText);
+            byte[] signatureBytes = Convert.FromBase64String(SignatureText);
+            byte[] recomputedHash = ComputeHashForMessage(cipherTextBytes);
+            VerifySignature(recomputedHash, signatureBytes);
+            byte[] plainTextBytes = GetReceiverCipher().Decrypt(cipherTextBytes, false);
+            return Encoding.UTF8.GetString(plainTextBytes);
+
+        }
+
+    }
+}
+
