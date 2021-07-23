@@ -177,3 +177,9 @@ namespace ClientSide
             byte[] plainTextBytes = GetReceiverCipher().Decrypt(cipherTextBytes, false);
             return Encoding.UTF8.GetString(plainTextBytes);
         }
+private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
+  }
